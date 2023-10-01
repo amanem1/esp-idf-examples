@@ -1,3 +1,5 @@
+//I2C scanner code for esp idf , works for all boards including esp32h2
+
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
