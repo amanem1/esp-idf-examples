@@ -32,7 +32,7 @@ void i2c_scanner() {
         i2c_master_write_byte(cmd, (i << 1) | I2C_MASTER_WRITE, true);
         i2c_master_stop(cmd);
 
-        scan_result = i2c_master_cmd_begin(I2C_MASTER_NUM, cmd, 1000 / portTICK_RATE_MS);
+        scan_result = i2c_master_cmd_begin(I2C_MASTER_NUM, cmd, 1000 / portTICK_PERIOD_MS);
 
         if (scan_result == ESP_OK) {
             printf("- Device found at address 0x%02X\n", i);
